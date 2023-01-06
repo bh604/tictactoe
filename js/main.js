@@ -5,20 +5,71 @@ let currentPlayer = xText
 let spaces = Array(9).fill(null)
 
 
-const startGame = () => {
+
+function startGame() {
     boxes.forEach(box => box.addEventListener('click', boxClicked))
 }
 
+function boxClicked(click) {
+    console.log(click.target)
+    // check if box clicked is null, if null change it to currentPlayer, then change currentPlayer to next
+    if(boxes[id] == null) {
 
-function boxClicked(e) {
-    const id = e.target.id
-
-    if(!spaces[id]) {
-        spaces[id] = currentPlayer
-        e.target.innerText = currentPlayer
-
-        currentPlayer = currentPlayer == xText ? oText : xText
     }
 }
 
+let winningCombos = [[]]
+
+
 startGame()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const startGame = () => {
+//     boxes.forEach(box => box.addEventListener('click', boxClicked))
+// }
+
+
+// function boxClicked(e) {
+//     const id = e.target.id
+
+//     if(!spaces[id]) {
+//         spaces[id] = currentPlayer
+//         e.target.innerText = currentPlayer
+
+//         currentPlayer = currentPlayer == xText ? oText : xText
+//     }
+// }
+
+// startGame()
